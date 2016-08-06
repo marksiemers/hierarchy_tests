@@ -1,6 +1,7 @@
 class Employee < ActiveRecord::Base
   has_ancestry
 
-  belongs_to :my_parent, class_name: :Employee
-  has_many :employees, foreign_key: :my_parent_id
+  def name
+    "#{first_name} #{last_name}"
+  end
 end
