@@ -19,9 +19,12 @@ $ rake db:restore
 ```
 
 ## Running Benchmarks
-The rake tasks for benchmarking are currently a work in progress.
+A set of benchmarking tests for read operations can be called with rake (after restoring the database):
+```bash
+$ rake benchmark:read
+```
 
-For now, you can restore the db and manually test in the rails console.
+No other benchmarking tests have been written yet. After restoring the db, tests can be run in the rails console.
 
 ## Notes
 In the interest of making setup faster, and knowing this is not planned for
@@ -31,7 +34,7 @@ enough to fix them and create a PR, please do:
   * Left it this way, in-case anyone wants to try to make benchmarking reports available over the web, but this really is a database/activerecord benchmarking app
 * The `SELECT INTO` in a migration to create and seed table
   * This one is particularly bad, and I plan to fix it, so the creation remains in the migration, and the seeding happens in the seed file
-  * You have to do hacky things right now
+  * You have to do hacky things right now to use the migrations and seed file (just restore the db for now)
 * The model names `Employee` and `Worker` are arbitrary and don't indicate the gem being used
   * Should be switched to `AncestryEmployee` and `ClosureTreeEmployee`
 * A postgresql dump file is checked in
