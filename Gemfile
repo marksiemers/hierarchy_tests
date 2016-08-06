@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ancestry'
 gem 'faker'
+gem 'closure_tree', :github => 'mdkirby/closure_tree'
 
 group :development, :test do
   gem 'byebug'

@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/mdkirby/closure_tree.git
+  revision: 5233ac20d183b80a025c19f19133ce246c2ef84f
+  specs:
+    closure_tree (6.1.0)
+      activerecord (>= 4.1.0)
+      with_advisory_lock (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -145,6 +153,9 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    with_advisory_lock (3.0.0)
+      activerecord (>= 3.2)
+      thread_safe
 
 PLATFORMS
   ruby
@@ -152,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   ancestry
   byebug
+  closure_tree!
   coffee-rails (~> 4.1.0)
   faker
   jbuilder (~> 2.0)
