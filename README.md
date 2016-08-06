@@ -6,6 +6,7 @@ This is not meant to be a production app, just a way to benchmark the performanc
 Current gems being tested:
 * `ancestry`
 * `closure_tree`
+
 If you want to see any added, raise an issue, or even better add it and create a PR.
 
 ## Setting up
@@ -20,14 +21,14 @@ $ rake db:restore
 ## Running Benchmarks
 The rake tasks for benchmarking are currently a work in progress.
 
-For now, you can restore the db and
+For now, you can restore the db and manually test in the rails console.
 
 ## Notes
 In the interest of making setup faster, and knowing this is not planned for
 production, a few ugly things have been done so far. If you hate any of these
 enough to fix them and create a PR, please do:
 * Unnecessarily a full Rails app
-** Left it this way, in-case anyone wants to try to make benchmarking reports available over the web
+** Left it this way, in-case anyone wants to try to make benchmarking reports available over the web, but this really is a database/activerecord benchmarking app
 * The `SELECT INTO` in a migration to create and seed table
 ** This one is particularly bad, and I plan to fix it, so the creation remains in the migration, and the seeding happens in the seed file
 ** You have to do hacky things right now
