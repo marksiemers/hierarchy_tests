@@ -2,7 +2,7 @@ require 'benchmark'
 
 namespace :benchmark do
   task :read => :environment do
-    titles = Employee.uniq.pluck(:title) & Worker.uniq.pluck(:title)
+    titles = Employee.all.uniq.pluck(:title) & Worker.all.uniq.pluck(:title)
     employees = []
     titles.each do |title|
       employee_count = Employee.where(title: title).count
